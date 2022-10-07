@@ -1,10 +1,10 @@
-# Title (replace with your title)
+# Matching an Email
 
-Introductory paragraph (replace this with your text)
+In this tutorial I will explain the use of Regular expressions to match emails. This is particularly useful for validating user inputs in various types of forms.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Regular expressions or RegEx are sequences of metacharacters, denoting a pattern. These patterns can be of various kindssuch as a mix of letters with digits, special characters and even different language characters. In this tutorial we will use the following expression /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ to match emails.
 
 ## Table of Contents
 
@@ -21,10 +21,16 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+Regular expressions will almost always start and end with forward slashes / so everything in betweens those slashes will be your regular expression.
 
 ### Anchors
+Anchors have special meaning in regular expressions. They do not match any character but instead they match a position before or after characters.
+The caret ^ anchor matches the beginning of the text.
+The dollar $ anchor matches the end of the text.
 
 ### Quantifiers
+Quantifiers match a number of instances of a character, group, or character class in a string.
+For matching emails we will use the + quantifier that will match one or more of the previous regex item. Let's take the first part of our regular expression as an example ([a-z0-9_\.-]+). The + is telling the expression to match any instances of letters, numbers, "-', "_" or ".". 
 
 ### OR Operator
 
